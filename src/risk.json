@@ -1,0 +1,15 @@
+{
+  "Risk": {
+    "Person": {
+      "Name": "Jordan",
+      "Occupation": "SandwichArtist",
+      "City": "Manchester"
+    },
+    "Vehicle": {
+      "Model": "Ford",
+      "ManufacturedDate": "2019-01-01",
+      "Colour": "Red",
+      "HasSecurityDevice": true
+    }
+  }
+}
