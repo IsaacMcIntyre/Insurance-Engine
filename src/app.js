@@ -1,5 +1,5 @@
 const calculate = (risks) => {
-    let premium = 0;
+    let premium = 500;
     response = personal(premium, personalRisks)
 }
 
