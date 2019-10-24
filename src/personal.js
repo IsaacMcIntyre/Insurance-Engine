@@ -25,6 +25,9 @@ const cityCalculator = (city, response) => {
     case "City of London":
       response.result = "Declined";
       response.reason = "LDN High Risk";
+    default:
+      //do nothing
+      break;
   }
 
   return response;
