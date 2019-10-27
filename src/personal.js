@@ -1,5 +1,5 @@
 module.exports = (person, premium) => {
-  let response = { result: null, reason: null, premium: premium };
+  let response = { result: 'Accept', reason: null, premium: premium };
   response = occupationCalculator(person.occupation, response);
   response = cityCalculator(person.city, response);
   return response;
@@ -16,7 +16,6 @@ const occupationCalculator = (occupation, response) => {
       //do nothing
       break;
   }
-
   return response;
 }
 
