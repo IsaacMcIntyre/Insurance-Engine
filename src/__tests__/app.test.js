@@ -1,4 +1,4 @@
-const engine = require('../app');
+const app = require('../app');
 
 describe('App', () => {
   test('No specific known data should return accept', () => {
@@ -15,7 +15,7 @@ describe('App', () => {
         "hasSecurityDevice": true
       }
     };
-    const response = engine(risk);
+    const response = app(risk);
     expect(response.result).toBe('Accept');
   });
 
@@ -35,7 +35,7 @@ describe('App', () => {
     };
     risk.person.city = 'City of London'; //will cause decline before vehicle calculations
     risk.vehicle.hasSecurityDevice = false; //should have result of report in vehicle calculations
-    const response = engine(risk);
+    const response = app(risk);
     expect(response.result).toBe('Declined'); //Declined and not reported
   });
 
@@ -54,7 +54,7 @@ describe('App', () => {
       }
     };
     risk.vehicle.hasSecurityDevice = false;
-    const response = engine(risk);
+    const response = app(risk);
     expect(response.result).toBe('Report');
   });
 });
